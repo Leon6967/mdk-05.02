@@ -50,12 +50,12 @@
         <h2>Задание 2</h2>
         <form action="">
             <p>Введите число:</p>
-            <input name="number">
+            <input name="number2">
             <input type="submit" value="Отправить">
         </form>
         <?php 
-        if(isset($_GET['number'])){
-            $a = $_GET['number'];
+        if(isset($_GET['number2'])){
+            $a = $_GET['number2'];
         switch($a){
                 case 1:
                     echo '1 января - новый год, 7 - января рождество.';
@@ -101,12 +101,12 @@
         <h2>Задание 3</h2>
         <form action="">
             <p>Введите последнее число вашего значения:</p>
-            <input name="number">
+            <input name="number3">
             <input type="submit" value="Отправить">
         </form>
         <?php 
-        if(isset($_GET['number'])){
-            $a = $_GET['number'];
+        if(isset($_GET['number3'])){
+            $a = $_GET['number3'];
         switch($a){
             case 1:
                 echo 'последняя цифра квадрата числа = 1';
@@ -144,12 +144,12 @@
         <h2>Задание 4</h2>
         <form action="">
             <p>Введите число :</p>
-            <input name="number">
+            <input name="number4">
             <input type="submit" value="Отправить">
         </form>
         <?php 
-        if(isset($_GET['number'])){
-            $a = $_GET['number'];
+        if(isset($_GET['number4'])){
+            $a = $_GET['number4'];
         switch($a){
             case 1:
                 echo 'мне 1 год';
