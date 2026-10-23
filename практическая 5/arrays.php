@@ -105,27 +105,5 @@
         foreach ($rez as $value) echo "$value ";
         echo "-  результат";
         ?>
-        <h2>Задание 9</h2>
-        <?php 
-        $task9 = [1, 2, 1, 3, 2, 1];
-        $pairs = 0;
-        $n = count($task9);
-        $used = [];
-        foreach ($task9 as $key => $value) {
-            if (!isset($used[$key])) {
-                foreach ($task9 as $key2 => $value2) {
-                    if ($key2 > $key && !isset($used[$key2])) {
-                        if ($value == $value2) {
-                            $pairs = $pairs + 1;
-                            $used[$key] = 1;
-                            $used[$key2] = 1;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        echo "пар = $pairs";
-        ?>
     </body>
     </html>
