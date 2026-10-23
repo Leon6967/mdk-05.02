@@ -66,12 +66,66 @@
         <h2>Задание 5</h2> 
         <?php 
         $a = [10, 20, 30, 14, 2, 8];
-        echo "четные по позиции в массиве числа";
+        echo "четные по позиции в массиве числа:";
         foreach ($a as $key => $value) {
             if ($key % 2 == 0) {
-                echo "$value ";
+                echo " $value ";
             }
         }
+        ?>
+        <h2>Задание 6</h2>
+        <?php 
+        $mas = [1, 3, 2, 5, 4, 7];
+        $prev = $mas[0];
+        foreach ($mas as $key => $value) {
+            if ($key > 0) {
+                if ($value > $prev) {
+                    echo "$value ";
+                }
+                $prev = $value;
+            }
+        }
+        echo "- числа большие, чем предыдущие им";
+        ?>
+        <h2>Задание 7</h2>
+        <?php 
+        $cis = [1, 2, 3, 4, 5];
+        $rez = [];
+        $i = 0;
+        foreach ($cis as $key => $value) {
+            if ($key % 2 == 0) {
+                if (isset($cis[$key + 1])) {
+                    $rez[] = $cis[$key + 1];
+                    $rez[] = $value;
+            }  else {
+                    $rez[] = $value;
+                }
+            }
+        }
+        foreach ($rez as $value) echo "$value ";
+        echo "-  результат";
+        ?>
+        <h2>Задание 9</h2>
+        <?php 
+        $task9 = [1, 2, 1, 3, 2, 1];
+        $pairs = 0;
+        $n = count($task9);
+        $used = [];
+        foreach ($task9 as $key => $value) {
+            if (!isset($used[$key])) {
+                foreach ($task9 as $key2 => $value2) {
+                    if ($key2 > $key && !isset($used[$key2])) {
+                        if ($value == $value2) {
+                            $pairs = $pairs + 1;
+                            $used[$key] = 1;
+                            $used[$key2] = 1;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        echo "пар = $pairs";
         ?>
     </body>
     </html>
