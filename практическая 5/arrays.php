@@ -10,6 +10,9 @@
         <h2>Задание 1</h2>
         <?php 
         $number = [1, 23, 44, 120, 87];
+        for($i = 0; $i < count($number); $i++){
+        echo $number[$i], ', ';
+    }
         $max = $number[0];
         $index = $number[0];
         foreach($number as $key => $value){
@@ -23,6 +26,9 @@
         <h2>Задание 2</h2>
         <?php 
         $nums = [3, 4, 2, 5];
+        for($i = 0; $i < count($nums); $i++){
+        echo $nums[$i], ', ';
+    }
         $sum = 0;
         $prod = 1;
         foreach ($nums as $value) {
@@ -34,6 +40,9 @@
         <h2>Задание 3</h2>
         <?php 
         $numba = [4, 8, 2, 6];
+        for($i = 0; $i < count($numba); $i++){
+        echo $numba[$i], ', ';
+    }
         $sum = 0;
         $count = 0;
         foreach ($numba as $value) {
@@ -66,6 +75,9 @@
         <h2>Задание 5</h2> 
         <?php 
         $a = [10, 20, 30, 14, 2, 8];
+        for($i = 0; $i < count($a); $i++){
+        echo $a[$i], ', ';
+    }
         echo "четные по позиции в массиве числа:";
         foreach ($a as $key => $value) {
             if ($key % 2 == 0) {
@@ -76,6 +88,9 @@
         <h2>Задание 6</h2>
         <?php 
         $mas = [1, 3, 2, 5, 4, 7];
+        for($i = 0; $i < count($mas); $i++){
+        echo $mas[$i], ', ';
+    }
         $prev = $mas[0];
         foreach ($mas as $key => $value) {
             if ($key > 0) {
@@ -90,6 +105,10 @@
         <h2>Задание 7</h2>
         <?php 
         $cis = [1, 2, 3, 4, 5];
+        for($i = 0; $i < count($cis); $i++){
+        echo $cis[$i], ', ';
+    }
+    echo "- начальный массив ";
         $rez = [];
         $i = 0;
         foreach ($cis as $key => $value) {
@@ -104,6 +123,22 @@
         }
         foreach ($rez as $value) echo "$value ";
         echo "-  результат";
+        ?>
+        <h2>Задание 9</h2>
+        <?php 
+        $mas = [1, 3, 8, 4, 2, 3, 4, 1, 7, 1];
+        for($i = 0; $i < count($mas); $i++){
+        echo $mas[$i], ', ';
+        }
+        $pair = 0;
+        foreach($mas as $key => $value){
+            foreach($mas as $key2 => $value2){
+                if ($key < $key2 && $value == $value2){
+                    $pair++;
+                }
+            }
+        }
+        echo " количество пар = $pair!";
         ?>
     </body>
     </html>
