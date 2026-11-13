@@ -69,5 +69,16 @@
 
         echo sumKvadratov([1, 2, 3, 4]);
         ?>
+        <h2>Задание 7</h2>
+        <?php 
+        function stringLength(...$strings){
+        $result = 0;
+        foreach($strings as $str){
+            $result += strlen($str) / 2;
+        }
+        return $result;
+        }
+        echo stringLength('арбузики', 'мишка', 'стол') . "- сумма длин всех строк"
+        ?>
     </body>
     </html>
