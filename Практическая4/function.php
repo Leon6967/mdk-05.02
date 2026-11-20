@@ -71,7 +71,7 @@
         ?>
         <h2>Задание 7</h2>
         <?php 
-        function stringLength(...$strings){
+        function stringLength( ...$strings){
         $result = 0;
         foreach($strings as $str){
             $result += strlen($str) / 2;
